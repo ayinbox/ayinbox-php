@@ -1,0 +1,40 @@
+{
+    "name": "ayinbox/ayinbox",
+    "description": "Official PHP client for the AY Inbox REST API.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["ayinbox", "cold email", "email", "api", "sdk"],
+    "homepage": "https://docs.ayinbox.com/api/",
+    "support": {
+        "email": "team@ayinbox.com",
+        "docs": "https://docs.ayinbox.com/api/",
+        "issues": "https://github.com/ayinbox/ayinbox-php/issues",
+        "source": "https://github.com/ayinbox/ayinbox-php"
+    },
+    "authors": [
+        {"name": "AY Inbox", "email": "team@ayinbox.com"}
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.4",
+        "guzzlehttp/psr7": "^2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5",
+        "phpstan/phpstan": "^1.12"
+    },
+    "autoload": {
+        "psr-4": {"AyInbox\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"AyInbox\\Tests\\": "tests/"}
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
